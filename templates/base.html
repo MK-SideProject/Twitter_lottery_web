@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+  <body>
+    {% block content %}
+    <div id="container">
+      <h1 class="title">Twitter Lottery</h1>
+      <div class="container-in">
+
+        <form action="/result" method="post">
+        <input type="text" id="link" name="link" placeholder="추첨 트윗 링크" class="input-field">
+        <p class="write">추첨 인원 선택 :  &nbsp;&nbsp;
+            <input type="number" id="countPeople" name="countPeople"
+            value="0" step="1" min="0" max="100">
+        </p>
+
+        <div class="confirm">
+            <input type="submit" value="추첨하기" class="btn">&nbsp;&nbsp;
+            <input type="reset" value="다시하기" class="btn">
+        </div>
+        </form>
+           {% endblock %}
+      </div>
+    </div>
+
+  </body>
+</html>

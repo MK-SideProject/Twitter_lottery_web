@@ -1,7 +1,6 @@
 from django.urls import path
-from .import views
-
+from .views import twitterlottery
 urlpatterns = [
-    path('', views.twitterlottery, name='twitterlottery'),
-    path('', views.result, name='result'),
+    path('', twitterlottery, name='twitterlottery'),
+   # path('result/', views.result, name='result'),
 ]

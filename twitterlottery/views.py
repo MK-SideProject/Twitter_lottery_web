@@ -1,47 +1,33 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import TwitterForm
 # Create your views here.
 import tweepy
 import twitter_key
 import re
 import random
 
+
+class connect_api():
+     consumer_key = twitter_key.DATABASE_TWITTER_KEY['consumer_key']
+     consumer_secret = twitter_key.DATABASE_TWITTER_KEY['consumer_secret']
+     access_token = twitter_key.DATABASE_TWITTER_KEY['access_token']
+     access_token_secret = twitter_key.DATABASE_TWITTER_KEY['access_token_secret']
+
+     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+     auth.set_access_token(access_token, access_token_secret)
+
+     api = tweepy.API(auth)
+
+
 def twitterlottery(request):
-   def connect_api():
-      consumer_key = twitter_key.DATABASE_TWITTER_KEY['consumer_key']
-      consumer_secret = twitter_key.DATABASE_TWITTER_KEY['consumer_secret']
-      access_token = twitter_key.DATABASE_TWITTER_KEY['access_token']
-      access_token_secret = twitter_key.DATABASE_TWITTER_KEY['access_token_secret']
-
-      auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-      auth.set_access_token(access_token, access_token_secret)
-
-      api = tweepy.API(auth)
-
-      return api
-
-   URL = input()
-   api = connect_api()
-
-   rt_count = int(input())
-
-   return render(request, 'twitterlottery/main.html', {})
+    model = TwitterForm
+    fields = ['link', 'countPeople']
+    return render(request, 'twitterlottery/main.html', {})
 
 
-def result(request, URL, rt_count):
-   def connect_api():
-      consumer_key = twitter_key.DATABASE_TWITTER_KEY['consumer_key']
-      consumer_secret = twitter_key.DATABASE_TWITTER_KEY['consumer_secret']
-      access_token = twitter_key.DATABASE_TWITTER_KEY['access_token']
-      access_token_secret = twitter_key.DATABASE_TWITTER_KEY['access_token_secret']
 
-      auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-      auth.set_access_token(access_token, access_token_secret)
-
-      api = tweepy.API(auth)
-
-      return api
-
+def result(request):
    api = connect_api()
    lottery_list = []
 
