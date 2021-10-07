@@ -9,4 +9,5 @@
 기존의 추첨기에 웹 배포를 위해 django를 사용했습니다.<br> config와 app 생성, templates의 html과 static css 파일을 통해 웹 페이지를 구현했습니다.
 
 # 아쉬운 점
-django 이용에 대한 미숙함과 db를 사용하지 않고 웹페이지 구현 시도에 실패한 점이 아쉬웠습니다.
+django 이용에 대한 미숙함과 db를 사용하지 않고 웹페이지 구현 시도에 실패한 점이 아쉬웠습니다.<br>
+![twitterlottery_web](https://user-images.githubusercontent.com/71076450/136339041-4550ef9c-441d-4da9-a589-d6d1c385f7ce.JPG)
