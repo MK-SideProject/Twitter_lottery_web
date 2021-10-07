@@ -6,12 +6,12 @@
 - html
 - css
 - django
-
+<br>
 # ✍🏻설명
-트윗 주소를 입력하면 해당 트윗을 알티한 사람 중 n명을 랜덤하게 뽑아 알티 추첨기로써의 기능을 구현했습니다.
+트윗 주소를 입력하면 해당 트윗을 알티한 사람 중 n명을 랜덤하게 뽑아 알티 추첨기로써의 기능을 구현했습니다.<br>
 
 # ✍🏻개발 과정
-기존의 추첨기에 웹 배포를 위해 django를 사용했습니다.<br> config와 app 생성, templates의 html과 static css 파일을 통해 웹 페이지를 구현했습니다.
+기존의 추첨기에 웹 배포를 위해 django를 사용했습니다.<br> config와 app 생성, templates의 html과 static css 파일을 통해 웹 페이지를 구현했습니다.<br>
 
 # ✍🏻문제점
 form 태그를 이용해 html에서 django로 데이터를 받는 기능을 구현하던 중 이슈가 발생했습니다. <br>
